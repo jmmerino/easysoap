@@ -143,6 +143,9 @@
                         if (!methodRequestParams) {
                             methodRequestParams = _.findWhere(requestParams, { 'name': paramName });
                         }
+                        if (!methodRequestParams) {
+                            methodRequestParams = _.findWhere(requestParams, { 'name': "parameters" });
+                        }
 
                         return getParamAsString(paramValue, paramName,
                             methodRequestParams,
